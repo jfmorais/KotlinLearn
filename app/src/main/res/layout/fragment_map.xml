@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <!--<com.google.android.gms.maps.MapView-->
+            <!--android:id="@+id/map1213"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+    <!--<FrameLayout-->
+            <!--android:id="@+id/map_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"></FrameLayout>-->
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <EditText
+                android:id="@+id/latitude"
+                android:layout_width="200dp"
+                android:layout_height="40dp"/>
+        <EditText
+                android:id="@+id/longitude"
+                android:layout_width="200dp"
+                android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            app:layout_dodgeInsetEdges="bottom">
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/localizatorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                app:srcCompat="@drawable/ic_baseline_my_location_24px"/>
+
+        <!-- <android.support.design.widget.FloatingActionButton
+                 android:id="@+id/newReminder"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8dp"
+                 app:srcCompat="@drawable/ic_baseline_add_24px"/>-->
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
