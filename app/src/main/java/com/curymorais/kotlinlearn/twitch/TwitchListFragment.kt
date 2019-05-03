@@ -5,12 +5,27 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.curymorais.kotlinlearn.KotlinLearnContract
 import com.curymorais.kotlinlearn.R
 
-class TwitchListFragment : Fragment() {
+class TwitchListFragment : Fragment(), KotlinLearnContract.View {
+
+    var mPresenter: KotlinLearnContract.Presenter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
+        initComponents()
+        setComponentListeners()
         return inflater.inflate(R.layout.fragment_twitch_list, null)
     }
+
+    override fun initComponents() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        mPresenter = TwitchListPresenter(this, TwitchListInteractor())
+    }
+
+    override fun setComponentListeners() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 }
