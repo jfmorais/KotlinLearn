@@ -20,12 +20,11 @@ class TwitchListFragment : Fragment(), KotlinLearnContract.View {
     }
 
     override fun initComponents() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         mPresenter = TwitchListPresenter(this, TwitchListInteractor())
     }
 
     override fun setComponentListeners() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        System.out.print(123)
     }
 
 }

@@ -5,7 +5,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.MenuItem
-import com.curymorais.kotlinlearn.dummy.DummyFragment
+import com.curymorais.kotlinlearn.videocast.VideoCastFragment
 import com.curymorais.kotlinlearn.localizator.LocalizatorFragment
 import com.curymorais.kotlinlearn.twitch.TwitchListFragment
 
@@ -45,7 +45,7 @@ class MainActivity : BaseActivity(), KotlinLearnContract.View, BottomNavigationV
             }
             R.id.dummyTool -> {
                 Log.i(TAG, "dummy tool started")
-                frag = DummyFragment()
+                frag = VideoCastFragment()
                 return loadFragment(frag)
             }
         }
