@@ -1,11 +1,14 @@
 package com.curymorais.kotlinlearn.videocast
 
+import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.curymorais.kotlinlearn.R
+import com.curymorais.kotlinlearn.videocast.videoplayer.VideoPlayerActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_row_video_cast.view.*
 
@@ -43,10 +46,11 @@ class VideoCastAdapter : RecyclerView.Adapter<VideoCastAdapter.VideoHolder>() {
         //4
         override fun onClick(v: View) {
             Log.d("RecyclerView", "CLICK!")
-//            val context = itemView.context
-//            val showPhotoIntent = Intent(context, PhotoActivity::class.java)
-//            showPhotoIntent.putExtra(PHOTO_KEY, photo)
-//            context.startActivity(showPhotoIntent)
+            val intent = Intent(v.context, VideoPlayerActivity::class.java)
+            // To pass any data to next activity
+             intent.putExtra("video", "/storage/emulated/0/Download/videoplayback.mp4")
+            // start your next activity
+            v.context.startActivity(intent)
         }
 
         fun bindVideo(video: Video) {

@@ -27,7 +27,6 @@ class VideoCastFragment : Fragment(), KotlinLearnContract.View {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.i(TAG,"onViewCreated")
         super.onViewCreated(view, savedInstanceState)
         initComponents()
 //        setComponentListeners()

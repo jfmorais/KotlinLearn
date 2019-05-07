@@ -10,7 +10,7 @@ class VideoCastPresenter(view: KotlinLearnContract.View): KotlinLearnContract.Pr
     val TAG = VideoCastPresenter::class.java.simpleName
     var mView = view
 
-
+    //Todo refactor do presenter
     fun getVideoList(): ArrayList<Video>{
         var gpath: String = Environment.getExternalStorageDirectory().absolutePath
         var spath = "Download"
@@ -34,7 +34,7 @@ class VideoCastPresenter(view: KotlinLearnContract.View): KotlinLearnContract.Pr
                     fileList.add(currentFile.absoluteFile)
                 }else{
                     Log.e(TAG, currentFile.name)
-                    var video = Video(currentFile.name, currentFile.totalSpace.toString())
+                    var video = Video(currentFile.name, root.toString()+File.separator+currentFile.name)
                     allvideos.add(video)
                 }
             }
